@@ -1,8 +1,6 @@
-const x: String = 'Hello World';
-
-async function fetchData() {
+async function fetchData(url: string) {
     try {
-      const response = await fetch('https://www.dnd5eapi.co/api/spells/acid-arrow');
+      const response = await fetch(url);
       
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -15,7 +13,4 @@ async function fetchData() {
     }
   }
   
-  // Call the async function
-  fetchData();
-
-console.log(x);
+  fetchData('https://www.dnd5eapi.co/api/spells/acid-arrow');
