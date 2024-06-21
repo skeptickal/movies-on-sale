@@ -9,5 +9,4 @@ var y = fetch('https://www.dnd5eapi.co/api/spells/acid-arrow')
     .then(function (data) { return console.log(data); })
     .catch(function (error) { return console.error('Fetch error:', error); });
 console.log(x);
-console.log(y);
 //# sourceMappingURL=tsc.js.map

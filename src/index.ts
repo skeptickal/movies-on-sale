@@ -11,4 +11,3 @@ const y = fetch('https://www.dnd5eapi.co/api/spells/acid-arrow')
 .catch(error => console.error('Fetch error:', error));
 
 console.log(x);
-console.log(y)
