@@ -34,32 +34,31 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-function fetchData(url) {
-    return __awaiter(this, void 0, void 0, function () {
-        var response, data, error_1;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    _a.trys.push([0, 3, , 4]);
-                    return [4, fetch(url)];
-                case 1:
-                    response = _a.sent();
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return [4, response.json()];
-                case 2:
-                    data = _a.sent();
-                    console.log(data);
-                    return [3, 4];
-                case 3:
-                    error_1 = _a.sent();
-                    console.error('Fetch error:', error_1);
-                    return [3, 4];
-                case 4: return [2];
-            }
-        });
+var _this = this;
+var fetchData = function (url) { return __awaiter(_this, void 0, void 0, function () {
+    var response, data, error_1;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                _a.trys.push([0, 3, , 4]);
+                return [4, fetch(url)];
+            case 1:
+                response = _a.sent();
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return [4, response.json()];
+            case 2:
+                data = _a.sent();
+                console.log(data);
+                return [3, 4];
+            case 3:
+                error_1 = _a.sent();
+                console.error('Fetch error:', error_1);
+                return [3, 4];
+            case 4: return [2];
+        }
     });
-}
-fetchData('https://www.dnd5eapi.co/api/spells/acid-arrow');
+}); };
+fetchData('https://serpapi.com/search?engine=google_play_movies');
 //# sourceMappingURL=tsc.js.map

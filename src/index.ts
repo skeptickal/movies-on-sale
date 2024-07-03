@@ -1,4 +1,4 @@
-async function fetchData(url: string) {
+const fetchData = async (url: string): Promise<void> => {
     try {
       const response = await fetch(url);
       
@@ -13,4 +13,4 @@ async function fetchData(url: string) {
     }
   }
   
-  fetchData('https://www.dnd5eapi.co/api/spells/acid-arrow');
+  fetchData('https://serpapi.com/search?engine=google_play_movies');
