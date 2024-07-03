@@ -49,11 +49,11 @@ var fetchData = function (query) { return __awaiter(_this, void 0, void 0, funct
                 _a.label = 1;
             case 1:
                 _a.trys.push([1, 4, , 5]);
-                return [4, fetch("".concat(baseUrl, "?").concat(params.toString()))];
+                return [4, fetch("".concat(baseUrl, "?engine=google_play_movies&").concat(params.toString()))];
             case 2:
                 response = _a.sent();
                 if (!response.ok) {
-                    throw new Error('Network response was not ok');
+                    throw new Error(response.status.toString());
                 }
                 return [4, response.json()];
             case 3:
@@ -68,5 +68,5 @@ var fetchData = function (query) { return __awaiter(_this, void 0, void 0, funct
         }
     });
 }); };
-fetchData('new movies on sale');
+fetchData('Most popular movie on Google Play');
 //# sourceMappingURL=tsc.js.map

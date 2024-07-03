@@ -9,10 +9,10 @@ const fetchData = async (query: string): Promise<void> => {
       });
 
     try {
-      const response = await fetch(`${baseUrl}?${params.toString()}`);
+      const response = await fetch(`${baseUrl}?engine=google_play_movies&${params.toString()}`);
       
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error(response.status.toString());
       }
   
       const data = await response.json();
@@ -22,4 +22,4 @@ const fetchData = async (query: string): Promise<void> => {
     }
   }
   
-  fetchData('new movies on sale');
+  fetchData('Most popular movie on Google Play');
