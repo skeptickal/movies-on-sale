@@ -35,30 +35,38 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 var _this = this;
-var fetchData = function (url) { return __awaiter(_this, void 0, void 0, function () {
-    var response, data, error_1;
+var fetchData = function (query) { return __awaiter(_this, void 0, void 0, function () {
+    var apiKey, baseUrl, params, response, data, error_1;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
-                _a.trys.push([0, 3, , 4]);
-                return [4, fetch(url)];
+                apiKey = '768872f198bf8db16efc365c23b22a99b9af9cbf291009b1f3cb86cbc3240d4b';
+                baseUrl = 'https://serpapi.com/search';
+                params = new URLSearchParams({
+                    q: query,
+                    api_key: apiKey,
+                });
+                _a.label = 1;
             case 1:
+                _a.trys.push([1, 4, , 5]);
+                return [4, fetch("".concat(baseUrl, "?").concat(params.toString()))];
+            case 2:
                 response = _a.sent();
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
                 return [4, response.json()];
-            case 2:
+            case 3:
                 data = _a.sent();
                 console.log(data);
-                return [3, 4];
-            case 3:
+                return [3, 5];
+            case 4:
                 error_1 = _a.sent();
                 console.error('Fetch error:', error_1);
-                return [3, 4];
-            case 4: return [2];
+                return [3, 5];
+            case 5: return [2];
         }
     });
 }); };
-fetchData('https://serpapi.com/search?engine=google_play_movies');
+fetchData('new movies on sale');
 //# sourceMappingURL=tsc.js.map
